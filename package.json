@@ -1,0 +1,17 @@
+{
+  "name": "roque",
+  "version": "0.0.1",
+  "description": "A roguelike",
+  "main": "js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "roguelike"
+  ],
+  "author": "Micheal Earl",
+  "license": "ISC",
+  "dependencies": {
+    "rot-js": "^2.1.1"
+  }
+}
