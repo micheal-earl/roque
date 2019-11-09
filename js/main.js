@@ -1,36 +1,34 @@
-let input = document.createElement("input");
-input.focus();
-
 let options = {
 	width: 50,
 	height: 20
-}
+};
 
 let display = new ROT.Display(options);
-
-let player = {
-  x: options.width / 2,
-  y: options.height / 2
-}
-
 document.body.appendChild(display.getContainer());
 
-drawWorld();
-display.draw(player.x, player.y, "@", "goldenrod");
+let player = new Player(
+  "Mike", 
+  options.width / 2, 
+  options.height / 2
+);
 
+// Initially draw the world
+drawWorld();
+player.draw();
+
+// Get input, WASD movement
 window.addEventListener("keydown", (e) => {
   let code = e.keyCode;
-  console.log(code)
+  console.log(player.posX + " " + player.posY);
 
-  if(code == "87") player.y -= 1;
-  if(code == "83") player.y += 1;
-  if(code == "65") player.x -= 1;
-  if(code == "68") player.x += 1;
+  if(code == "87") player.posY -= 1;
+  if(code == "83") player.posY += 1;
+  if(code == "65") player.posX -= 1;
+  if(code == "68") player.posX += 1;
 
   drawWorld();
-  display.draw(player.x, player.y, "@", "goldenrod");
+  player.draw();
 });
-
 
 function drawWorld() {
   for (var i = 0; i < options.width; i++) {
@@ -42,4 +40,8 @@ function drawWorld() {
       }
     }
   }
+}
+
+function drawPlayer() {
+  display.draw(player.posX, player.posY, "@", "goldenrod");
 }
