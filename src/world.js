@@ -1,3 +1,5 @@
+"use strict"; // Interpret the code in strict mode
+
 class World {
 
   // stupid simple for now, make a box
@@ -28,9 +30,9 @@ class World {
     for (var i = 0; i < arr.length; i++) {
       for (var j = 0; j < arr[i].length; j++) {
         if (!i || !j || i + 1 == arr.length || j + 1 == arr[i].length) {
-          arr[i][j] = "#";
+          arr[i][j] = tile.wall;
         } else {
-          arr[i][j] = ".";
+          arr[i][j] = tile.grass;
         }
       }
     }
@@ -41,8 +43,9 @@ class World {
   draw(display) {
     for (var i = 0; i < this._width; i++) {
       for (var j = 0; j < this._length; j++) {
-        display.draw(i, j, this._state[i][j], "gray");
-        //display.draw(i, j, ".", "#666");
+        // this._state[i][j].draw(display)
+        let tile = this._state[i][j];
+        display.draw(i, j, tile.char, tile.color, tile.bgColor);
       }
     }
   }

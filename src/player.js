@@ -1,7 +1,9 @@
+"use strict"; // Interpret the code in strict mode
+
 class Player extends Pawn {
 
-  constructor(name, posX, posY) {
-    super(name, posX, posY);
+  constructor(name, posX, posY, char, color, bgColor) {
+    super(name, posX, posY, char, color, bgColor);
 
   }
 
