@@ -71,6 +71,7 @@ _Qi refining will be one of the main progression tools in the game. You progress
 - Dao Seeking
 - Immortal
 - Dao Realm
+- Samsara Severing
 
 #### Body Cultivation Stages
 - Qi Condensation
@@ -82,6 +83,7 @@ _Qi refining will be one of the main progression tools in the game. You progress
 - Dao Realm
 
 #### Techniques
+_Your character will slowly accrue many techniques. But, they take time and effort to train in. It will be up to you (and your qi types) to decide which techniques you will train and use. The plan is to have hundreds of techniques to find in game, some super unique, other pretty generic._
 
 #### The Dao
 - Start with a dao, refine it in dao seeking stage
@@ -109,21 +111,22 @@ _Should be expansive just like in any popular xianxia, you start small and event
 ---
 
 ## Spiritual Beasts
-- S Tier
+- Unique Tier
   - The Azure Dragon (Wood)
   - The Vermillion Bird (Fire)
   - The Yellow Dragon (Earth)
   - The White Tiger (Metal)
   - The Black Tortoise (Water)
-- A Tier
+  
+- S Tier
   - Kun Peng
   - Qilin
+
+- A Tier
 
 - B Tier
 
 - C Tier
-
-- D Tier
 
 
 ## Enemies
