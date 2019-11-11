@@ -12,7 +12,6 @@
   "author": "Micheal Earl",
   "license": "ISC",
   "dependencies": {
-    "rot-js": "^2.1.1",
-    "typescript": "^3.7.2"
+    "rot-js": "^2.1.1"
   }
 }
