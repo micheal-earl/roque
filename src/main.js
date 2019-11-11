@@ -1,22 +1,23 @@
-let options = {
-	width: 50,
-	height: 20
-};
+let options = { width: 10, height: 10 };
 
+// Set up our "terminal" display
 let display = new ROT.Display(options);
 document.body.appendChild(display.getContainer());
 
+// Generate the world
+let world = new World(options.width, options.height);
+
 let player = new Player(
   "Mike", 
-  options.width / 2, 
-  options.height / 2
+  world.width / 2, 
+  world.length / 2
 );
 
 // Initially draw the world
-drawWorld();
+world.draw(display);
 player.draw(display);
 
-// Get input, WASD movement
+// Get input, WASD movement, scuffed "gameloop"
 window.addEventListener("keydown", (e) => {
   let code = e.keyCode
 
@@ -27,22 +28,6 @@ window.addEventListener("keydown", (e) => {
   if(code == "65") player.posX -= 1;
   if(code == "68") player.posX += 1;
 
-  drawWorld();
+  world.draw(display);
   player.draw(display);
 });
-
-function drawWorld() {
-  for (var i = 0; i < options.width; i++) {
-    for (var j = 0; j < options.height; j++) {
-      if (!i || !j || i + 1 == options.width || j + 1 == options.height) {
-        display.draw(i, j, "#", "gray");
-      } else {
-        display.draw(i, j, ".", "#666");
-      }
-    }
-  }
-}
-
-function drawPlayer() {
-  display.draw(player.posX, player.posY, "@", "goldenrod");
-}

@@ -12,7 +12,6 @@ class Pawn {
   set posX(x) { this._posX = x; }
   set posY(y) { this._posY = y; }
 
-
   draw(display) {
     display.draw(this._posX, this._posY, "@", "goldenrod");
   }
