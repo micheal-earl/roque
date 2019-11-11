@@ -1,3 +1,6 @@
+const ROT = require("../node_modules/rot-js/dist/rot.min.js");
+import { Player } from './player';
+
 let options = {
 	width: 50,
 	height: 20
@@ -18,8 +21,9 @@ player.draw();
 
 // Get input, WASD movement
 window.addEventListener("keydown", (e) => {
-  let code = e.keyCode;
-  console.log(player.posX + " " + player.posY);
+  let code: string = e.keyCode.toString();
+
+  console.log("x: " + player.posX + ", y: " + player.posY);
 
   if(code == "87") player.posY -= 1;
   if(code == "83") player.posY += 1;
