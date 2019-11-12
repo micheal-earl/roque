@@ -9,7 +9,7 @@ class World {
     this._state = this.generateMap();
   }
 
-  // getters, setters
+  // Getters, Setters
   get state() { return this._state; }
   get width() { return this._width; }
   get length() { return this._length; }

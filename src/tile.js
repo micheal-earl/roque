@@ -11,7 +11,7 @@ class Tile {
     this._color
   }
 
-  draw(display) {
+  draw(display) {W
     display.draw(this._posX, this._posY, this._char, this._color);
   }
 }

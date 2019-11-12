@@ -11,6 +11,7 @@ class Pawn {
     this._bgColor = bgColor;
   }
 
+  // Getters, Setters
   get posX() { return this._posX; }
   get posY() { return this._posY; }
 
@@ -29,8 +30,18 @@ class Pawn {
     }
   }
 
+  update(action) {
+    // Nothing here yet, will handle AI?
+  }
+
   draw(display) {
-    display.draw(this._posX, this._posY, this._char, this._color, this._bgColor);
+    display.draw(
+      this._posX, 
+      this._posY, 
+      this._char, 
+      this._color, 
+      this._bgColor
+      );
   }
 
 }
