@@ -1,12 +1,33 @@
 ## Gameplay
-Plays like a traditional roguelike (DCSS, TOME, C:DDA). Anything you could do on a tile based grid will likely be implemented (Aoe spells, auras, line spells). There will be a crafting system inspired by C:DDA.  
+Plays like a traditional roguelike (DCSS, TOME, C:DDA): 8-way movement, bump combat, spells, etc. Anything you could do on a tile based grid will likely be implemented (Aoe spells, auras, line spells). There will be a crafting system inspired by C:DDA.  
 
-Character creation will be similar to C:DDA with a point based system and flaws/boons that you can take. 
+Character creation will be similar to C:DDA with a point based system and flaws/boons that you can take. There will be less of a focus on "class" and more of a focus on specializing your character through choices made in game.
 
 ---
 
 ## Player Experience
 _What is the player experience from character creation to end game?_
+
+I would like to have a decent description of the gameplay process here, but that's a WIP. For now I would just like to say that I want a run to kind of _feel_ like a traditional xianxia story. For those of you who may have read popular xianxia novels (Renegade Immortal, I Shall Seal the Heavens, Panlong, Cradle, etc) I want each playthrough to kind of follow the general progression of those stories.
+
+---
+
+## Progression
+_Progression will be decently different from other popular roguelikes. I'll do my best to explain it here._
+
+Qi will be the primary metric of progression in the game. A more progressed character has more Qi and regens Qi more quickly.
+
+A character will start with some amount of Qi, maybe 100/100. You can use that Qi to cast techniques (spells, etc) or perform spiritual feats. 
+
+Your character can __meditate__ to increase the soft cap of their Qi. So if you meditate for 10 hours (in game) maybe you now have 110/110 Qi.
+
+You can earn experience points through combat, quests, and crafting. If you meditate while you have available experience points you will consume those points and increase your Qi soft cap more quickly. (There are also other methods to up the rate in which you can increase your Qi soft cap)
+
+Your Qi has a hard cap and when you reach that hard cap you can begin trying to "break through" to the next stage. You can only increase the hard cap of your Qi by breaking through to a new stage.
+
+In xianxia novels, progression is usually related to a cultivation "stage" that your character has obtained. This roguelike will follow that formula. Instead of levels, you will have a cultivation stage. There will be 8 Major cultivation stages and each stage will contain a number of sub-stages. Xianxia novels get pretty out of hand with power growth. Usually a major stage is considered as an __order of magnitude or more__ powerful than the previous stage while sub stages represent linear growth of power within a major stage.
+
+When you increase your stage within the game your stats will improve and you will be able to use more advanced techniques. (Will also have more Qi to spend on those techniques.)
 
 ---
 
@@ -74,7 +95,7 @@ _There will be many kinds of Qi in the game. These Qi types can fuel certain tec
 #### Qi Refining
 _Qi refining will be one of the main progression tools in the game. You progress through the stages primarily through Qi refinement. The better your Qi refinement technique, the more quickly you can progress. However, not all Qi refinement techniques are made equal and some may require you to satisfy unique constraints to fully utilize them._  
 
-_Qi refinement techniques are tied to one of the 4 main Qi groups (Primary, Tertiary, Martial, Balance) Example: If you have a primary qi refinement technique it can increase your Qi in Fire, Water, Metal, Earth, or Wood._
+_Qi refinement techniques are tied to one of the 4 main Qi groups (Primary, Tertiary, Martial, Balance) Example: If you have a primary Qi refinement technique it can increase your Qi in Fire, Water, Metal, Earth, or Wood._
 - Standard Qi Refinement Techniques
 - Unique Qi Refinement Techniques
   - Slaughter Refinement
@@ -83,7 +104,7 @@ _Qi refinement techniques are tied to one of the 4 main Qi groups (Primary, Tert
     - You gain Qi cap faster based on how much food you've eaten since the last time you meditated
 
 #### Meditation
-_You can choose to meditate at any time out of combat. Meditation will slowly increase your maximum Qi cap. The speed at which meditation increases your Qi cap is based on how many experience points you've earned since the last time you've meditated and your qi refinement technique_
+_You can choose to meditate at any time out of combat. Meditation will slowly increase your maximum Qi cap. The speed at which meditation increases your Qi cap is based on how many experience points you've earned since the last time you've meditated and your Qi refinement technique_
 
 #### Boons/Flaws
 _During character creation you can take flaws to increase the number of points you have to work with. These flaws could be anything from reducing your baseline reputation with every sect to taking penalties on ranged attack checks. Boons will effectively be the opposite of flaws and cost character creation points instead of granting them._
@@ -115,7 +136,7 @@ _You can increase in cultivation current stages once you reach your stages maxim
 - Dao Realm
 
 #### Techniques
-_Your character will slowly accrue many techniques as you play the game. But, they take time and effort to train in. It will be up to you (and your qi types) to decide which techniques you will train and use. The plan is to have hundreds of techniques to find in game, some super unique, others pretty generic._
+_Your character will slowly accrue many techniques as you play the game. But, they take time and effort to train in. It will be up to you (and your Qi types) to decide which techniques you will train and use. The plan is to have hundreds of techniques to find in game, some super unique, others pretty generic._
 
 #### The Dao
 _This idea is a little underdeveloped. The Dao will be a central "belief" of your character and some late game progress will rely on you fulfilling or discovering more about your dao. These daos could be something like "I will vanquish evil!" which may give you stat bonus when fighting "evil" enemies._
