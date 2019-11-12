@@ -23,11 +23,15 @@ Your character can __meditate__ to increase the soft cap of their Qi. So if you 
 
 You can earn experience points through combat, quests, and crafting. If you meditate while you have available experience points you will consume those points and increase your Qi soft cap more quickly. (There are also other methods to up the rate in which you can increase your Qi soft cap)
 
+Meditation will take real world time. In xianxia, many cultivators spend dozens of years in meditation before accumulating enough Qi to make a breakthrough. Time may not be 1:1 with the real world, but it would still take a LONG time waiting for your character to break through without experience. To mitigate this make sure you have plenty of experience and a strong Qi refinement method before attempting to break through.
+
 Your Qi has a hard cap and when you reach that hard cap you can begin trying to "break through" to the next stage. You can only increase the hard cap of your Qi by breaking through to a new stage.
 
 In xianxia novels, progression is usually related to a cultivation "stage" that your character has obtained. This roguelike will follow that formula. Instead of levels, you will have a cultivation stage. There will be 8 Major cultivation stages and each stage will contain a number of sub-stages. Xianxia novels get pretty out of hand with power growth. Usually a major stage is considered as an __order of magnitude or more__ powerful than the previous stage while sub stages represent linear growth of power within a major stage.
 
 When you increase your stage within the game your stats will improve and you will be able to use more advanced techniques. (Will also have more Qi to spend on those techniques.)
+
+Progression will revolve around an adventure > meditate > adventure > meditate cycle. The more progress and stuff you find during your adventures, the faster you will accumulate Qi during meditation.
 
 ---
 
