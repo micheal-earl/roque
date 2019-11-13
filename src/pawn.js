@@ -2,7 +2,7 @@
 
 class Pawn {
 
-  constructor(name, posX, posY, char, color, bgColor) {
+  constructor(name, posX, posY, char, color, bgColor = "") {
     this._name = name;
     this._posX = posX;
     this._posY = posY;

@@ -23,8 +23,7 @@ class Game {
       this._width  / 2, 
       this._length / 2,
       "@",
-      "red",
-      "#D3FFCE"
+      "white"
     );
 
     this.draw();

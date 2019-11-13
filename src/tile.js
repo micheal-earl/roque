@@ -21,7 +21,7 @@ let tile = {
   grass: {
     char: ".",
     color: "green",
-    bgColor: "#D3FFCE",
+    bgColor: "",
     isWalkable: true,
     blocksLOS: false
   },
