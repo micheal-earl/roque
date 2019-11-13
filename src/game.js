@@ -9,12 +9,12 @@ class Game {
     this._display = new ROT.Display({ 
       width: this._width, 
       height: this._length,
-      fontSize: 15,
+      fontSize: 16,
       fontFamily: "monospace",
       forceSquareRatio: true
     });
 
-    //document.body.appendChild(this._display.getContainer());
+    document.body.appendChild(this._display.getContainer());
 
     this._world = new World(this._width, this._length);
     
@@ -39,12 +39,9 @@ class Game {
 
   }
 
-  // Render everything to the display
   draw() {
     this._world.draw(this._display);
     this._player.draw(this._display);
   }
 
 }
-
-let x = new Game();
