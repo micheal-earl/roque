@@ -15,10 +15,10 @@ window.addEventListener("keydown", (e) => {
 
 game.display.getContainer().addEventListener("mousemove", (e) => {
   let canvas = game.display.getContainer();
-  var rect = canvas.getBoundingClientRect();
+  let rect = canvas.getBoundingClientRect();
 
-  let x = Math.floor((e.clientX - rect.left) / 16);
-  let y = Math.floor((e.clientY - rect.left) / 16);
+  let x = Math.floor((e.clientX - offX) / 16);
+  let y = Math.floor((e.clientY - offY) / 16);
 
   console.log("x: " + x + " y: " + y);
 

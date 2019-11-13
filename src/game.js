@@ -3,8 +3,8 @@
 class Game {
 
   constructor() {
-    this._width = 30;
-    this._length = 30;
+    this._width = 60;
+    this._length = 39;
 
     this._display = new ROT.Display({ 
       width: this._width, 
@@ -20,8 +20,8 @@ class Game {
     
     this._player = new Player(
       "Mike", 
-      this._width  / 2, 
-      this._length / 2,
+      Math.floor(this._width  / 2), 
+      Math.floor(this._length / 2),
       "@",
       "white"
     );

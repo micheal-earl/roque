@@ -15,10 +15,10 @@ class World {
   get length() { return this._length; }
 
   makeBlank2dArray(width, length) {
-    let arr = new Array(length);
+    let arr = new Array(width);
 
-    for(let i = 0; i < length; i++) {
-      arr[i] = new Array(width);
+    for(let i = 0; i < width; i++) {
+      arr[i] = new Array(length);
     }
 
     return arr;
@@ -27,9 +27,9 @@ class World {
   generateMap() {
     let arr = this.makeBlank2dArray(this._width, this._length);
 
-    for (var i = 0; i < arr.length; i++) {
-      for (var j = 0; j < arr[i].length; j++) {
-        if (!i || !j || i + 1 == arr.length || j + 1 == arr[i].length) {
+    for (var i = 0; i < this._width; i++) {
+      for (var j = 0; j < this._length; j++) {
+        if (!i || !j || i + 1 == this._width || j + 1 == this._length) {
           arr[i][j] = tile.wall;
         } else {
           arr[i][j] = tile.grass;
