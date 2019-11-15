@@ -6,7 +6,7 @@ class World {
   constructor(width, length) {
     this._width = width;
     this._length = length;
-    this._state = this.generateMap();
+    this._state = this.generateMap(this._width, this._length);
   }
 
   // Getters, Setters
@@ -14,7 +14,7 @@ class World {
   get width() { return this._width; }
   get length() { return this._length; }
 
-  makeBlank2dArray(width, length) {
+  makeXYArray(width, length) {
     let arr = new Array(width);
 
     for(let i = 0; i < width; i++) {
@@ -24,12 +24,12 @@ class World {
     return arr;
   }
 
-  generateMap() {
-    let arr = this.makeBlank2dArray(this._width, this._length);
+  generateMap(width, length) {
+    let arr = this.makeXYArray(width, length);
 
-    for (var i = 0; i < this._width; i++) {
-      for (var j = 0; j < this._length; j++) {
-        if (!i || !j || i + 1 == this._width || j + 1 == this._length) {
+    for (var i = 0; i < width; i++) {
+      for (var j = 0; j < length; j++) {
+        if (!i || !j || i + 1 == width || j + 1 == length) {
           arr[i][j] = tile.wall;
         } else {
           arr[i][j] = tile.grass;
