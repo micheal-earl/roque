@@ -11,7 +11,7 @@ class Pawn {
     this._color = color;
     this._bgColor = bgColor;
 
-    world.state[posX][posY].entities.player = this;
+    world.state[posX][posY].entity = this;
   }
 
   // Getters, Setters
@@ -24,10 +24,10 @@ class Pawn {
   move(world, x, y) {
     let tile = world.state[x][y].tile;
     if(tile.isWalkable) {
-      delete world.state[this._posX][this._posY].entities.player;
+      world.state[this._posX][this._posY].entity = null;
       this._posX = x;
       this._posY = y;
-      world.state[x][y].entities.player = this;
+      world.state[x][y].entity = this;
     } else {
       // DEBUG
       console.log("tile not walkable");

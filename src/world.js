@@ -26,7 +26,7 @@ class World {
       for (var j = 0; j < length; j++) {
         arr[i][j] = {
           tile: null,
-          entities: {},
+          entity: null,
           items: {}
         };
       }
