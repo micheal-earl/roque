@@ -1,6 +1,4 @@
-"use strict";
-
- // Interpret the code in strict mode
+"use strict"; // Interpret the code in strict mode
 
 let game = new Game();
 let input = new Input();
@@ -19,9 +17,16 @@ game.display.getContainer().addEventListener("mousemove", (e) => {
   let x = Math.floor((e.clientX - canvas.offsetLeft) / 16);
   let y = Math.floor((e.clientY - canvas.offsetTop) / 16);
 
-  console.log("x: " + x + " y: " + y);
-
   game.draw();
   game.display.draw(x, y, "=", "green", "green");
+});
 
+game.display.getContainer().addEventListener("click", (e) => {
+  let canvas = game.display.getContainer();
+
+  let x = Math.floor((e.clientX - canvas.offsetLeft) / 16);
+  let y = Math.floor((e.clientY - canvas.offsetTop) / 16);
+
+  console.log("x: " + x + " y: " + y);
+  console.log(game.world.state[x][y].entities);
 });

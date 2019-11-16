@@ -2,8 +2,8 @@
 
 class Player extends Pawn {
 
-  constructor(name, posX, posY, char, color, bgColor) {
-    super(name, posX, posY, char, color, bgColor);
+  constructor(name, world, posX, posY, char, color, bgColor) {
+    super(name, world, posX, posY, char, color, bgColor);
 
   }
 

@@ -2,7 +2,7 @@
 
 class World {
 
-  // stupid simple for now, make a box
+  // Map gen is super simple for now
   constructor(width, length) {
     this._width = width;
     this._length = length;
@@ -14,25 +14,37 @@ class World {
   get width() { return this._width; }
   get length() { return this._length; }
 
-  makeXYArray(width, length) {
+  // Make an empty, rectangular map
+  makeEmptyMap(width, length) {
     let arr = new Array(width);
 
     for(let i = 0; i < width; i++) {
       arr[i] = new Array(length);
     }
 
+    for (var i = 0; i < width; i++) {
+      for (var j = 0; j < length; j++) {
+        arr[i][j] = {
+          tile: null,
+          entities: {},
+          items: {}
+        };
+      }
+    }
+
     return arr;
   }
 
+  // Generate our map features
   generateMap(width, length) {
-    let arr = this.makeXYArray(width, length);
+    let arr = this.makeEmptyMap(width, length);
 
     for (var i = 0; i < width; i++) {
       for (var j = 0; j < length; j++) {
         if (!i || !j || i + 1 == width || j + 1 == length) {
-          arr[i][j] = tile.wall;
+          arr[i][j].tile = tile.wall;
         } else {
-          arr[i][j] = tile.grass;
+          arr[i][j].tile = tile.grass;
         }
       }
     }
@@ -43,11 +55,9 @@ class World {
   draw(display) {
     for (var i = 0; i < this._width; i++) {
       for (var j = 0; j < this._length; j++) {
-        // this._state[i][j].draw(display)
-        let tile = this._state[i][j];
+        let tile = this._state[i][j].tile;
         display.draw(i, j, tile.char, tile.color, tile.bgColor);
       }
     }
   }
-
 }

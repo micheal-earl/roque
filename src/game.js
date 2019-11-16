@@ -20,6 +20,7 @@ class Game {
     
     this._player = new Player(
       "Mike", 
+      this._world,
       Math.floor(this._width  / 2), 
       Math.floor(this._length / 2),
       "@",

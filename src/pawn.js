@@ -2,13 +2,16 @@
 
 class Pawn {
 
-  constructor(name, posX, posY, char, color, bgColor = "") {
+  constructor(name, world, posX, posY, char, color, bgColor = "") {
     this._name = name;
+    this._world = world;
     this._posX = posX;
     this._posY = posY;
     this._char = char;
     this._color = color;
     this._bgColor = bgColor;
+
+    world.state[posX][posY].entities.player = this;
   }
 
   // Getters, Setters
@@ -19,10 +22,12 @@ class Pawn {
   set posY(y) { this._posY = y; }
 
   move(world, x, y) {
-    let tile = world.state[x][y];
+    let tile = world.state[x][y].tile;
     if(tile.isWalkable) {
+      delete world.state[this._posX][this._posY].entities.player;
       this._posX = x;
       this._posY = y;
+      world.state[x][y].entities.player = this;
     } else {
       // DEBUG
       console.log("tile not walkable");
