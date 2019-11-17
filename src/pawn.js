@@ -21,6 +21,7 @@ class Pawn {
   set posX(x) { this._posX = x; }
   set posY(y) { this._posY = y; }
 
+  /*
   move(world, x, y) {
     let tile = world.state[x][y].tile;
     if(tile.isWalkable) {
@@ -34,6 +35,7 @@ class Pawn {
       console.log(tile);
     }
   }
+  */
 
   update(action) {
     // Nothing here yet, will handle AI?

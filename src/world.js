@@ -6,13 +6,27 @@ class World {
   constructor(width, length) {
     this._width = width;
     this._length = length;
-    this._state = this.generateMap(this._width, this._length);
+    this._state = this.generateMap(width, length);
   }
 
   // Getters, Setters
   get state() { return this._state; }
   get width() { return this._width; }
   get length() { return this._length; }
+
+  moveEntity(pawn, x, y) {
+    let tile = this._state[x][y].tile;
+    if(tile.isWalkable) {
+      this._state[pawn.posX][pawn.posY].entity = null;
+      pawn.posX = x;
+      pawn.posY = y;
+      this._state[x][y].entity = this;
+    } else {
+      // DEBUG
+      console.log("tile not walkable");
+      console.log(tile);
+    }
+  }
 
   // Make an empty, rectangular map
   makeEmptyMap(width, length) {
