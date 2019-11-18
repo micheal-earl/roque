@@ -28,7 +28,7 @@ let tile = {
   wall: {
     char: "#",
     color: "white",
-    bgColor: "gray",
+    bgColor: "#515151",
     isWalkable: false,
     blocksLOS: true
   }

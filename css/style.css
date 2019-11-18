@@ -1,16 +1,17 @@
 canvas {
-  padding-left: 0;
-  padding-right: 0;
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-p {
-  color: white;
-  font-size: 7em;
+h1 {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+  color: #f7f7f7;
+  font-size: 5em;
 }
 
 body {
-  background-color: black;
+  background-color: #0c0c0c;
 }
