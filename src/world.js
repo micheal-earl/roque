@@ -13,6 +13,7 @@ class World {
   get state() { return this._state; }
   get width() { return this._width; }
   get length() { return this._length; }
+  getEntity(x, y) { return this._state[x][y].entity }
 
   moveEntity(pawn, x, y) {
     let tile = this._state[x][y].tile;
@@ -20,7 +21,7 @@ class World {
       this._state[pawn.posX][pawn.posY].entity = null;
       pawn.posX = x;
       pawn.posY = y;
-      this._state[x][y].entity = this;
+      this._state[x][y].entity = pawn;
     } else {
       // DEBUG
       console.log("tile not walkable");

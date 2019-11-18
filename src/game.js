@@ -3,8 +3,8 @@
 class Game {
 
   constructor() {
-    this._width = 60;
-    this._length = 39;
+    this._width = 30;
+    this._length = 30;
 
     this._display = new ROT.Display({ 
       width: this._width, 

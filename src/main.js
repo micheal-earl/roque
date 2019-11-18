@@ -28,5 +28,5 @@ game.display.getContainer().addEventListener("click", (e) => {
   let y = Math.floor((e.clientY - canvas.offsetTop) / 16);
 
   console.log("x: " + x + " y: " + y);
-  console.log(game.world.state[x][y].entity);
+  console.log(game.world.getEntity(x, y));
 });

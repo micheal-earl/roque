@@ -32,9 +32,4 @@ let tile = {
     isWalkable: false,
     blocksLOS: true
   }
-  /*
-  drawTile: function(display, tile) {
-    display.draw()
-  }
-  */
 };
