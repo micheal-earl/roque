@@ -81,20 +81,20 @@ _There will be many kinds of Qi in the game. These Qi types can fuel certain tec
   - Thunder
   - Wind
   - Poison
-  - Shadow
-  - Light
+  - Ice
+  - Blood
 - The Martial Elements
   - Sword
   - Combat
   - Precision
-  - ?
+  - Conqueror
   - Slaughter
 - The Balance Elements
   - Karma
   - Death
   - Life
-  - ?
-  - ?
+  - Yin
+  - Yang
 
 #### Qi Refining
 _Qi refining will be one of the main progression tools in the game. You progress through the stages primarily through Qi refinement. The better your Qi refinement technique, the more quickly you can progress. However, not all Qi refinement techniques are made equal and some may require you to satisfy unique constraints to fully utilize them._  
@@ -114,7 +114,7 @@ _You can choose to meditate at any time out of combat. Meditation will slowly in
 _During character creation you can take flaws to increase the number of points you have to work with. These flaws could be anything from reducing your baseline reputation with every sect to taking penalties on ranged attack checks. Boons will effectively be the opposite of flaws and cost character creation points instead of granting them._
 - Boons
   - ?
-    -?
+    - ?
 - Flaws
   - Disreputable
     - Your base reputation with every sect has been reduced
@@ -122,22 +122,31 @@ _During character creation you can take flaws to increase the number of points y
 #### Cultivation Stages
 _You can increase in cultivation current stages once you reach your stages maximum possible Qi cap._
 - Qi Condensation
+  - 9 Substages
 - Foundation Establishment
+  - 3 Substages
 - Core Formation
+  - 3 Substages
 - Nascent Soul
+  - 3 Substages
 - Dao Seeking
+  - 3 Substages
 - Immortal
+  - 3 Substages
 - Dao Realm
+  - 3 Substages
 - Samsara Severing
+  - ?
 
 #### Body Cultivation Stages
-- Qi Condensation
-- Foundation Establishment
-- Core Formation
-- Nascent Soul
-- Dao Seeking
-- Immortal
-- Dao Realm
+_This may or may not be a thing, think physical strength and endurance_
+- Body Refinement
+- Power Establishment
+- Strength Formation
+- Nascent Body
+- Dao Body
+- Immortal Body
+- Dao Realm Body
 
 #### Techniques
 _Your character will slowly accrue many techniques as you play the game. But, they take time and effort to train in. It will be up to you (and your Qi types) to decide which techniques you will train and use. The plan is to have hundreds of techniques to find in game, some super unique, others pretty generic._
