@@ -5,7 +5,7 @@ let input = new Input();
 
 // This event listener is our pseudo game-loop
 window.addEventListener("keydown", (e) => {
-  let code = e.keyCode
+  let code = e.keyCode;
   input.handle(code);
   game.update(input.action)
   game.draw();
