@@ -70,11 +70,12 @@ class Game {
     this._player.update(action)
 
     for(let i = 0; i < this._entities.length; i++) {
-      if(this._entities[i].doesExist === false) {
+      if(!this._entities[i].doesExist) {
         this._entities.splice(i, 1);
         i--;
+      } else {
+        this._entities[i].update();
       }
-      this._entities[i].update();
     }
   }
 
