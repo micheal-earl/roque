@@ -6,6 +6,7 @@ class Game {
     this._width = 30;
     this._length = 30;
 
+    // Make a new Rot.js display
     this._display = new ROT.Display({ 
       width: this._width, 
       height: this._length,
@@ -14,6 +15,7 @@ class Game {
       forceSquareRatio: true
     });
 
+    // Append the Rot.js display to our html
     document.body.appendChild(this._display.getContainer());
 
     this._world = new World(this._width, this._length);

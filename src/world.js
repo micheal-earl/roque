@@ -15,21 +15,14 @@ class World {
   get length() { return this._length; }
   getEntity(x, y) { return this._state[x][y].entity }
 
-  moveEntity(pawn, x, y) {
-    let tile = this._state[x][y].tile;
-    if(tile.isWalkable) {
-      this._state[pawn.posX][pawn.posY].entity = null;
-      pawn.posX = x;
-      pawn.posY = y;
-      this._state[x][y].entity = pawn;
-    } else {
-      // DEBUG
-      console.log("tile not walkable");
-      console.log(tile);
-    }
-  }
-
-  // Make an empty, rectangular map
+  /*
+  * Make a 2d array populated with this struct
+  * {
+  *   tile: null,
+  *   entity: null,
+  *   items: {}
+  * };
+  */
   makeEmptyMap(width, length) {
     let arr = new Array(width);
 

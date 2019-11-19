@@ -11,6 +11,7 @@ class Pawn {
     this._color = color;
     this._bgColor = bgColor;
 
+    // Place our Pawn in the world
     world.state[posX][posY].entity = this;
   }
 
@@ -21,21 +22,31 @@ class Pawn {
   set posX(x) { this._posX = x; }
   set posY(y) { this._posY = y; }
 
-  /*
-  move(world, x, y) {
-    let tile = world.state[x][y].tile;
+  move(world, newX, newY) {
+    let tile = world.state[newX][newY].tile;
+    let entity = world.state[newX][newY].entity;
+    let oldX = this._posX;
+    let oldY = this._posY;
+
     if(tile.isWalkable) {
-      world.state[this._posX][this._posY].entity = null;
-      this._posX = x;
-      this._posY = y;
-      world.state[x][y].entity = this;
+      // Remove this Pawn from its current location
+      world.state[oldX][oldY].entity = null;
+
+      // Update this Pawns internal position tracking
+      this._posX = newX;
+      this._posY = newY;
+
+      // Place this Pawn in a new location
+      world.state[newX][newY].entity = this;
+    } else if(entity === null) {
+      // TODO: Output to real game log instead of console.log
+      console.log("There is already an entity here!");
+      console.log(entity);
     } else {
-      // DEBUG
-      console.log("tile not walkable");
+      console.log("You cannot walk over this tile!");
       console.log(tile);
     }
   }
-  */
 
   update(action) {
     // Nothing here yet, will handle AI?

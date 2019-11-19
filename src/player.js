@@ -10,16 +10,16 @@ class Player extends Pawn {
   update(action, world) {
     switch(action) {
       case "move_up":
-        world.moveEntity(this, this.posX, this.posY - 1);
+        this.move(world, this.posX, this.posY - 1);
         break;
       case "move_down":
-        world.moveEntity(this, this.posX, this.posY + 1);
+        this.move(world, this.posX, this.posY + 1);
         break;
       case "move_left":
-          world.moveEntity(this, this.posX - 1, this.posY);
+        this.move(world, this.posX - 1, this.posY);
         break;
       case "move_right":
-          world.moveEntity(this, this.posX + 1, this.posY);
+        this.move(world, this.posX + 1, this.posY);
         break;
       default:
         break;
