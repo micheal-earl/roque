@@ -7,9 +7,17 @@ canvas {
 h1 {
   text-align: center;
   margin-top: 1em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0em;
   color: #f7f7f7;
   font-size: 5em;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0em;
+  margin-bottom: 1em;
+  color: #f7f7f7;
+  font-size: 1em;
 }
 
 body {

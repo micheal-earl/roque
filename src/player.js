@@ -2,24 +2,37 @@
 
 class Player extends Pawn {
 
-  constructor(name, world, posX, posY, char, color, bgColor) {
-    super(name, world, posX, posY, char, color, bgColor);
+  constructor(args) {
+    super(args);
 
   }
 
-  update(action, world) {
+  update(action) {
+    super.update();
     switch(action) {
       case "move_up":
-        this.move(world, this.posX, this.posY - 1);
+        this.move(this.posX, this.posY - 1);
+        break;
+      case "move_upleft":
+        this.move(this.posX - 1, this.posY - 1);
+        break;
+      case "move_upright":
+        this.move(this.posX + 1, this.posY - 1);
         break;
       case "move_down":
-        this.move(world, this.posX, this.posY + 1);
+        this.move(this.posX, this.posY + 1);
+        break;
+      case "move_downleft":
+        this.move(this.posX - 1, this.posY + 1);
+        break;
+      case "move_downright":
+        this.move(this.posX + 1, this.posY + 1);
         break;
       case "move_left":
-        this.move(world, this.posX - 1, this.posY);
+        this.move(this.posX - 1, this.posY);
         break;
       case "move_right":
-        this.move(world, this.posX + 1, this.posY);
+        this.move(this.posX + 1, this.posY);
         break;
       default:
         break;

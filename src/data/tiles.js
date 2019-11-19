@@ -17,7 +17,7 @@ class Tile {
 }
 */
 
-let tile = {
+let tiles = {
   grass: {
     char: ".",
     color: "green",
