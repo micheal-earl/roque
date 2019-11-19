@@ -61,11 +61,11 @@ class Pawn {
         console.log("Are you sure you want to attack this dude?");
         console.log(entity);
       } else if(entity !== null) {
-        console.log("There's already an entity there!");
+        console.log(this._name + ", there's already an entity there!");
         console.log(entity);
       }
       if(!tile.isWalkable) {
-        console.log("You cannot walk over this tile!");
+        console.log(this._name + " tries to walk over a tile, but fails.");
         console.log(tile);
       }
     }
@@ -78,8 +78,9 @@ class Pawn {
       let damage = this.calculateDamage();
       entity.hp = entity.hp - damage;
       console.log(this._name + " attacks " + entity.name 
-                  + " with your {WEAPON}");
-      console.log("They do " + damage + " damage! Target HP: " + entity.hp);
+                  + " with their {WEAPON}");
+      console.log("They do " + damage + " damage to " 
+                  + entity.name + ", HP left: " + entity.hp);
     }
   }
   
