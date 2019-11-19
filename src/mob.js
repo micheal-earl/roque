@@ -10,7 +10,6 @@ class Mob extends Pawn {
   // Random AI
   update() {
     super.update();
-    let action;
     let rng = ROT.RNG.getPercentage();
     if(rng >= 75) {
       // Move up

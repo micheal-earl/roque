@@ -3,13 +3,10 @@
 class Game {
 
   constructor() {
-    this._width = 30;
-    this._length = 30;
-
     // Make a new Rot.js display
     this._display = new ROT.Display({ 
-      width: this._width, 
-      height: this._length,
+      width: 30, 
+      height: 30,
       fontSize: 16,
       fontFamily: "monospace",
       forceSquareRatio: true
@@ -18,7 +15,9 @@ class Game {
     // Append the Rot.js display to our html
     document.body.appendChild(this._display.getContainer());
 
-    this._world = new World(this._width, this._length);
+    let worldWidth = 60;
+    let worldHeight = 60;
+    this._world = new World(worldWidth, worldHeight);
     this._entities = [];
     
     this._player = new Player({
@@ -26,8 +25,8 @@ class Game {
       hp: 50,
       world: this._world,
       position: {
-        x: Math.floor(this._width  / 2), 
-        y: Math.floor(this._length / 2)
+        x: Math.floor(worldWidth  / 2), 
+        y: Math.floor(worldHeight / 2)
       },
       char: "@",
       color: "white",
@@ -80,12 +79,12 @@ class Game {
   }
 
   draw() {
-    this._world.draw(this._display);
-    this._player.draw(this._display);
+    this._world.draw(this._display, this._player.posX + 15, this._player.posY + 15);
+    //this._player.draw(this._display);
 
     for(let i = 0; i < this._entities.length; i++) {
       if(this._entities[i].doesExist) {
-        this._entities[i].draw(this._display);
+        //this._entities[i].draw(this._display);
       }
     }
   }
