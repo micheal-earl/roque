@@ -64,56 +64,12 @@ class World {
     return arr;
   }
 
-  submatrix(arr, topLeft, bottomRight) {
-
-    let out = new Array(bottomRight.row - topLeft.row);
-  
-    for (var i = topLeft.row; i <= bottomRight.row; i++) {
-      out[i - topLeft.row] = new Array(bottomRight.col - topLeft.col);
-      for (var j = topLeft.col; j <= bottomRight.col; j++) {
-        console.log(arr[i].toString())
-        if(false) {
-          out[i - topLeft.row][j - topLeft.col] = null;
-        } else {
-          out[i - topLeft.row][j - topLeft.col] = arr[i][j];
-        }
-      }
-    }
-    
-    return out;
-  }
-
   draw(display, x, y) {
-    /*
     for (var i = 0; i < this._width; i++) {
       for (var j = 0; j < this._length; j++) {
         let tile = this._state[i][j].tile;
         display.draw(i, j, tile.char, tile.color, tile.bgColor);
       }
     }
-    */
-
-    let camera = this.submatrix(
-      this._state, 
-      {row: y - 15, col: x - 15}, 
-      {row: y + 15, col: x + 15}
-    );
-
-    for (var i = 0; i < camera.length; i++) {
-      for (var j = 0; j < camera[i].length; j++) {
-        if(camera[i][j] !== null) {
-          let entity = camera[i][j].entity;
-          if(entity !== null) {
-            display.draw(i - 15, j - 15, tile.char, tile.color, tile.bgColor);
-          } else {
-            let tile = camera[i][j].tile;
-            display.draw(i - 15, j - 15, tile.char, tile.color, tile.bgColor);
-          }
-        } else {
-          display.draw(i, j, " ", "black", "");
-        }
-      }
-    }
   }
-
 }

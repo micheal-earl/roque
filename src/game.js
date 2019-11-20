@@ -15,8 +15,8 @@ class Game {
     // Append the Rot.js display to our html
     document.body.appendChild(this._display.getContainer());
 
-    let worldWidth = 60;
-    let worldHeight = 60;
+    let worldWidth = 30;
+    let worldHeight = 30;
     this._world = new World(worldWidth, worldHeight);
     this._entities = [];
     
@@ -80,11 +80,11 @@ class Game {
 
   draw() {
     this._world.draw(this._display, this._player.posX + 15, this._player.posY + 15);
-    //this._player.draw(this._display);
+    this._player.draw(this._display);
 
     for(let i = 0; i < this._entities.length; i++) {
       if(this._entities[i].doesExist) {
-        //this._entities[i].draw(this._display);
+        this._entities[i].draw(this._display);
       }
     }
   }
