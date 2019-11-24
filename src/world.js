@@ -56,7 +56,11 @@ class World {
         if (!i || !j || i + 1 == width || j + 1 == length) {
           arr[i][j].tile = tiles.wall;
         } else {
-          arr[i][j].tile = tiles.grass;
+          if(ROT.RNG.getPercentage() > 95) {
+            arr[i][j].tile = tiles.grass2;
+          } else {
+            arr[i][j].tile = tiles.grass;
+          }
         }
       }
     }

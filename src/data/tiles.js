@@ -25,6 +25,13 @@ let tiles = {
     isWalkable: true,
     blocksLOS: false
   },
+  grass2: {
+    char: "`",
+    color: "green",
+    bgColor: "",
+    isWalkable: true,
+    blocksLOS: false
+  },
   wall: {
     char: "#",
     color: "white",
