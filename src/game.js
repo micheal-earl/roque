@@ -79,7 +79,7 @@ class Game {
   }
 
   draw() {
-    this._world.draw(this._display, this._player.posX + 15, this._player.posY + 15);
+    this._world.draw(this._display, this._player.posX, this._player.posY);
     this._player.draw(this._display);
 
     for(let i = 0; i < this._entities.length; i++) {

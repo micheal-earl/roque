@@ -69,11 +69,34 @@ class World {
   }
 
   draw(display, x, y) {
+
+    // viewport initially renders in the right spot now
+    // need to use player x and y to endure viewport always
+    // centered in the renderer will take some math skills
+    // really close to getting camera to work
+    // try to come up with good names to get rid of magic #s
+    
+    let pOffSetX = y - 5;
+    let pOffSetY = x - 6;
+
+    for (var i = x - 5; i < x + 6; i++) {
+      for (var j = y - 5; j < y + 6; j++) {
+        try {
+          let tile = this._state[i][j].tile;
+          display.draw(i - 10, j - 10, tile.char, tile.color, tile.bgColor);
+        } catch {
+          display.draw(i, j, "", "black", "black");
+        }
+      }
+    }
+
+    /*
     for (var i = 0; i < this._width; i++) {
       for (var j = 0; j < this._length; j++) {
         let tile = this._state[i][j].tile;
         display.draw(i, j, tile.char, tile.color, tile.bgColor);
       }
     }
+    */
   }
 }
