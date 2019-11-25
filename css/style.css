@@ -6,20 +6,20 @@ canvas {
 
 h1 {
   text-align: center;
-  margin-top: 1em;
-  margin-bottom: 0em;
+  margin-top: 1.5em;
+  margin-bottom: 0.1em;
   color: #f7f7f7;
-  font-size: 5em;
+  font-size: 4em;
 }
 
 h2 {
   text-align: center;
   margin-top: 0em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   color: #f7f7f7;
   font-size: 1em;
 }
 
 body {
-  background-color: #0c0c0c;
+  background-color: black;
 }
