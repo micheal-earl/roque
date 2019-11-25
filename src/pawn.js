@@ -93,14 +93,16 @@ class Pawn {
   }
 
   die() {
+    console.log(this._name + " has died!")
     let world = this._world;
-    world.setEntity(null, this._posX, this.posY);
+    world.setEntity(null, this._posX, this._posY);
     this._doesExist = false;
   }
 
   update() {
     if(this._hp <= 0) {
       this.die();
+      console.log(this)
     }
   }
 

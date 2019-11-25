@@ -49,7 +49,7 @@ class Game {
   makeMob(type, x, y) {
     let args = {
       name: type.name,
-      hp: 50,
+      hp: 15,
       world: this._world,
       position: { 
         x: x, 

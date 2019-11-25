@@ -37,6 +37,8 @@ class Player extends Pawn {
       default:
         break;
     }
+    
+    console.log("x: " + this.posX + ", y: " + this.posY);
   }
 
   draw(display) {

@@ -10,7 +10,15 @@ class Mob extends Pawn {
   // Random AI
   update() {
     super.update();
+
+    // Bugfix to prevent movement once an entity
+    // is flagged as not existing
+    if(!this._doesExist) {
+      return false;
+    }
+
     let rng = ROT.RNG.getPercentage();
+    //rng = -1;
     if(rng >= 75) {
       // Move up
       this.move(this.posX, this.posY - 1);

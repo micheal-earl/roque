@@ -73,11 +73,13 @@ class World {
   draw(display, x, y) {
 
     // Draw black across display
+    /*
     for(let i = 0; i < this._state.length; i++) {
       for(let j = 0; j < this._state[i].length; j++) {
         display.draw(i, j, "", "black", "black" );
       }
     }
+    */
 
     // The camera works! This code is really bad
     // TODO: Refactor camera code
