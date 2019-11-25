@@ -7,6 +7,8 @@ class World {
     this._width = width;
     this._length = length;
     this._state = this.generateMap(width, length);
+
+    this._camera = { x: 15, y: 15, w: 30, h: 30 }
   }
 
   // Getters, Setters
@@ -34,8 +36,8 @@ class World {
       arr[i] = new Array(length);
     }
 
-    for (var i = 0; i < width; i++) {
-      for (var j = 0; j < length; j++) {
+    for (let i = 0; i < width; i++) {
+      for (let j = 0; j < length; j++) {
         arr[i][j] = {
           tile: null,
           entity: null,
@@ -51,8 +53,8 @@ class World {
   generateMap(width, length) {
     let arr = this.makeEmptyMap(width, length);
 
-    for (var i = 0; i < width; i++) {
-      for (var j = 0; j < length; j++) {
+    for (let i = 0; i < width; i++) {
+      for (let j = 0; j < length; j++) {
         if (!i || !j || i + 1 == width || j + 1 == length) {
           arr[i][j].tile = tiles.wall;
         } else {
@@ -70,22 +72,47 @@ class World {
 
   draw(display, x, y) {
 
-    // viewport initially renders in the right spot now
-    // need to use player x and y to endure viewport always
-    // centered in the renderer will take some math skills
-    // really close to getting camera to work
-    // try to come up with good names to get rid of magic #s
-    
-    let pOffSetX = y - 5;
-    let pOffSetY = x - 6;
+    // Draw black across display
+    for(let i = 0; i < this._state.length; i++) {
+      for(let j = 0; j < this._state[i].length; j++) {
+        display.draw(i, j, "", "black", "black" );
+      }
+    }
 
-    for (var i = x - 5; i < x + 6; i++) {
-      for (var j = y - 5; j < y + 6; j++) {
+    // The camera works! This code is really bad
+    // TODO: Refactor camera code
+
+    let initX = this._camera.x;
+    let initY = this._camera.y;
+    let cameraWidth = this._camera.w;
+    let cameraHeight = this._camera.h;
+
+    let difX = initX - x;
+    let difY = initY - y;
+
+    for (let i = x - 15; i <= x + 15; i++) {
+      for (let j = y - 15; j <= y + 15; j++) {
         try {
           let tile = this._state[i][j].tile;
-          display.draw(i - 10, j - 10, tile.char, tile.color, tile.bgColor);
+          let e = this._state[i][j].entity;
+          display.draw(
+            i + difX, 
+            j + difY, 
+            tile.char, tile.color, tile.bgColor
+          );
+          if(e !== null) {
+            display.draw(
+              i + difX, 
+              j + difY, 
+              e._char, e._color, e._bgColor
+            );
+          }
         } catch {
-          display.draw(i, j, "", "black", "black");
+          display.draw(
+            i + difX, 
+            j + difY, 
+            "", "black", "black"
+          );
         }
       }
     }
